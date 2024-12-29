@@ -2,7 +2,7 @@
 
 void ForceRegistry::updateForces( real duration) { // creating the updateForce function of registry class
 
-	Register::iterator i = registrations.begin(); // iterator of type Register to iterate thorugh the vector
+	Register::iterator i = registrations.begin(); // iterator of type Register to iterate through the vector
 	for (; i < registrations.end(); i++) {
 		i->fg->updateForce(i->particle, duration); //calling the ForceGenerator object of i to update the force on the particle of i for given duration
 	}
@@ -53,8 +53,8 @@ void ParticleSpring::updateForce(Particle* particle, real duration) {
 	force -= other->getPosition(); // subtracting position of other point to get the current extended / compressed length vector of spring
 
 	real magnitude = real_abs(force.magnitude() - lknot); //subtracting current length from rest length to obtain net change in length and then taking its absolute value
-	force.normalization(); //normailzing current force to get its unit vector
-	magnitude *= springConstant; //calcultaing magnitude of net force applied be spring
+	force.normalization(); //normalizing current force to get its unit vector
+	magnitude *= springConstant; //calculating magnitude of net force applied be spring
 	force *= -magnitude; // force applies in opposite direction thus multiplying it's unit vector with -1 times the magnitude of force applied
 	particle->addForce(force);
 

@@ -32,7 +32,7 @@ class Particle {
 
 		void setDrag(const real drag);
 
-		real getDrag() const;
+		real getDrag() const; 
 
 		void setPosition(const Vector3D& position);
 

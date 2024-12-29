@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ballistics.cpp" />
+    <ClCompile Include="body.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="particle world.cpp" />
     <ClCompile Include="particlecontact.cpp" />

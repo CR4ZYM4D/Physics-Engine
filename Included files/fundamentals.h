@@ -420,7 +420,7 @@ class Matrix3by3 { //will be used to hold the inertia tensor of an object/body a
 		}
 
 		Matrix3by3(const Vector3D& v1 , const Vector3D& v2 , const Vector3D& v3) {
-			//parameterised constructor with each vector representing one column of the matrix
+			//parametrized constructor with each vector representing one column of the matrix
 
 			data[0] = v1.x;
 			data[3] = v1.y;
@@ -468,7 +468,7 @@ class Matrix3by3 { //will be used to hold the inertia tensor of an object/body a
 
 
 		//set the value of the matrix as the inertia tensor of a cuboidal block with the vector
-		//half denotng the half length of each side i.e. each compoent of the vector half denotes 
+		//half denoting the half length of each side i.e. each component of the vector half denotes 
 		//the distance of the face of cuboid lying perpendicular to that particular from the centre of the cuboid
 
 		void setBlockInertiaTensor(Vector3D& half, real mass) {
@@ -550,7 +550,7 @@ class Matrix3by3 { //will be used to hold the inertia tensor of an object/body a
 			return Vector3D(data[i], data[i + 3], data[i + 6]);
 		}
 
-		void setInverse(const Matrix3by3& m) { //inverts the matrix m and stores the inverted matrix in the cureent matrix
+		void setInverse(const Matrix3by3& m) { //inverts the matrix m and stores the inverted matrix in the current matrix
 
 			real determinant = m.data[0] * (m.data[4] * m.data[8] - m.data[5] * m.data[7]) -
 				m.data[1] * (m.data[3] * m.data[8] - m.data[5] * m.data[6]) +
@@ -607,7 +607,7 @@ class Matrix3by3 { //will be used to hold the inertia tensor of an object/body a
 
 		}
 
-		Matrix3by3 multiplyMatrices(const Matrix3by3& o) { //mulitplies given matrix with the current one and returns it in a new matrix 
+		Matrix3by3 multiplyMatrices(const Matrix3by3& o) { //multiplies given matrix with the current one and returns it in a new matrix 
 			
 				return Matrix3by3(
 					data[0] * o.data[0] + data[1] * o.data[3] + data[2] * o.data[6],

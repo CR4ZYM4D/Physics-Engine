@@ -36,6 +36,9 @@
     <ClCompile Include="particle world.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="body.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Included files\accuracy.h">
