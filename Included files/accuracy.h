@@ -8,3 +8,4 @@ typedef float real;
 #define real_sin sinf
 #define real_cos cosf
 #define real_exp expf
+#define real_pow powf

@@ -14,6 +14,8 @@ class RigidBody { //class to store the methods and values of a body
 		//the angular acceleration. The inertia Tensor is 3x3 matrix 
 		// containing the moment of inertia of the body about each axis 
 		Matrix3by3 inverseInertiaTensorLocal;
+		
+		real linearDamping;
 
 		real angularDamping; // holds the coefficient or constant of damping/drag forces 
 							//to the rotational forces acting on the body
@@ -43,7 +45,9 @@ class RigidBody { //class to store the methods and values of a body
 		
 		public:
 
-			//void calculateDerivedData();
+			//function to calculate the transfom and inertia tensor 
+			//matrices after the end of frame to get their updated values
+			void calculateDerivedData();
 
 			// linear function to integrate te acceleration and 
 			//force acting on the body going into the next frame i.e.

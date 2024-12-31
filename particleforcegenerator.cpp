@@ -17,6 +17,7 @@ void ForceRegistry :: add(Particle* particle , ForceGenerator* fg){
 	registrations.push_back(registration); // inserting the registration object at the end of the vector
 
 }
+
 ParticleGravity :: ParticleGravity(const Vector3D& gravity):gravity(gravity)
 {	//setting value of const gravity to be used here as constructor parameter
 }
@@ -171,4 +172,8 @@ void Buoyancy :: updateForce(Particle* particle , real duration){
 
 	particle->addForce(force);
 
+}
+
+void ForceGenerator::updateForce(Particle* particle, real duration)
+{
 }
