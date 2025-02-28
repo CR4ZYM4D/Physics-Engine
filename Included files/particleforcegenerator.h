@@ -129,7 +129,7 @@ class AnchoredBungee : public AnchoredSpring { //interface for bungee cord ancho
 
 };
 
-class Buoyancy : public ForceGenerator { //interface to generate the bouyant force acting on a particle
+class ParticleBuoyancy : public ForceGenerator { //interface to generate the bouyant force acting on a particle
 
 	real volume; // stores volume of given body/ particle
 	real height; // stores elevation of top-most point of particle
@@ -138,7 +138,7 @@ class Buoyancy : public ForceGenerator { //interface to generate the bouyant for
 
 	public:
 
-		Buoyancy(real volume, real height, real liquidLevel, real liquidDensity = 1000.0f); //setting default density as that of water
+		ParticleBuoyancy(real volume, real height, real liquidLevel, real liquidDensity = 1000.0f); //setting default density as that of water
 
 		virtual void updateForce(Particle* particle, real duration);
 

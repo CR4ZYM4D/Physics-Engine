@@ -39,6 +39,9 @@
     <ClCompile Include="body.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="bodyforcegenerator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Included files\accuracy.h">
@@ -63,6 +66,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Included files\body.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Included files\bodyforcegenerator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

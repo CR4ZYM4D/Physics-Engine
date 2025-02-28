@@ -20,7 +20,7 @@ class RigidBody { //class to store the methods and values of a body
 		real angularDamping; // holds the coefficient or constant of damping/drag forces 
 							//to the rotational forces acting on the body
 
-		Vector3D position;
+		Vector3D position;//position of center of mass of the body
 
 		Quaternion orientation; // holds the rotation/orientation of the body in 3 dimensions
 
@@ -180,7 +180,7 @@ class RigidBody { //class to store the methods and values of a body
 			// the acceleration is set w.r.t global coordinates 
 			void getPreviousFrameAcceleration(Vector3D* acceleration)const;
 
-			Vector3D getPreviousFrameAccleration()const; //return the linear acceleration of the body in the 
+			Vector3D getPreviousFrameAcceleration()const; //return the linear acceleration of the body in the 
 														 //end of the previous frame in a new vector
 
 			void clearAccumulators();//clear the force and torque accumulators

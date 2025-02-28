@@ -107,7 +107,17 @@ public:
 		return Vector3D(y * v.z - z * v.y, z * v.x - x * v.z, x * v.y - y * v.x);
 	}
 
+	Vector3D X(const Vector3D& v) { //function for vector product
+		return Vector3D(y * v.z - z * v.y, z * v.x - x * v.z, x * v.y - y * v.x);
+	}
+
 	void addScaledVector(Vector3D& v, real scale) {
+		x += v.x * scale;
+		y += v.y * scale;
+		z += v.z * scale;
+	}
+	
+	void addScaledVector(const Vector3D& v,const real scale) {
 		x += v.x * scale;
 		y += v.y * scale;
 		z += v.z * scale;
